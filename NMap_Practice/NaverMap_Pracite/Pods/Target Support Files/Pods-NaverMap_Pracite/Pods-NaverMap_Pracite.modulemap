@@ -1,0 +1,6 @@
+framework module Pods_NaverMap_Pracite {
+  umbrella header "Pods-NaverMap_Pracite-umbrella.h"
+
+  export *
+  module * { export * }
+}
