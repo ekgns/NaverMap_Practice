@@ -15,6 +15,8 @@ class ViewController: UIViewController  {
     
     let marker = NMFMarker()
     
+    let viewModel = CenterViewModel()
+    
     var lat: Double?
     var lng: Double?
     
@@ -48,6 +50,8 @@ class ViewController: UIViewController  {
         let cameraUpdate = NMFCameraUpdate(scrollTo:  NMGLatLng(lat: lat ?? 0.0, lng: lng ?? 0.0), zoomTo: 17)
         mapView.moveCamera(cameraUpdate)
     }
+    
+   
     
     func currentLoactionOverray() {
         mapView.positionMode = .direction

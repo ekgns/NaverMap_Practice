@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		6798110BC374374A8E231800 /* Pods_NaverMap_Pracite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCF93A262A1A99C71D04AB1 /* Pods_NaverMap_Pracite.framework */; };
+		ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */; };
+		ABB3D0F426CF807900722EB3 /* CenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F326CF807900722EB3 /* CenterViewModel.swift */; };
+		ABB3D0F626CF909100722EB3 /* CenterDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F526CF909100722EB3 /* CenterDefine.swift */; };
+		ABB3D0F926CF966800722EB3 /* CenterService+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F826CF966800722EB3 /* CenterService+TargetType.swift */; };
+		ABB3D0FB26CF9F3B00722EB3 /* CenterVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0FA26CF9F3B00722EB3 /* CenterVO.swift */; };
+		ABB3D0FD26CFAD7C00722EB3 /* CenterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0FC26CFAD7C00722EB3 /* CenterResponse.swift */; };
 		ABFF9D7426CDF14600AF1C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D7326CDF14600AF1C9E /* AppDelegate.swift */; };
 		ABFF9D7626CDF14600AF1C9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D7526CDF14600AF1C9E /* SceneDelegate.swift */; };
 		ABFF9D7826CDF14600AF1C9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D7726CDF14600AF1C9E /* ViewController.swift */; };
 		ABFF9D7B26CDF14600AF1C9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFF9D7926CDF14600AF1C9E /* Main.storyboard */; };
 		ABFF9D7D26CDF14700AF1C9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABFF9D7C26CDF14700AF1C9E /* Assets.xcassets */; };
 		ABFF9D8026CDF14700AF1C9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFF9D7E26CDF14700AF1C9E /* LaunchScreen.storyboard */; };
-		ABFF9D8826CE04DF00AF1C9E /* CenterListVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D8726CE04DF00AF1C9E /* CenterListVO.swift */; };
-		ABFF9D8E26CE1AF500AF1C9E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D8D26CE1AF500AF1C9E /* Service.swift */; };
-		ABFF9D9026CE1CA300AF1C9E /* CenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D8F26CE1CA300AF1C9E /* CenterViewModel.swift */; };
-		ABFF9D9226CE20DC00AF1C9E /* Service+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D9126CE20DC00AF1C9E /* Service+TargetType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000606C959EB57E7EF27737C /* Pods-NaverMap_Pracite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverMap_Pracite.release.xcconfig"; path = "Target Support Files/Pods-NaverMap_Pracite/Pods-NaverMap_Pracite.release.xcconfig"; sourceTree = "<group>"; };
+		ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
+		ABB3D0F326CF807900722EB3 /* CenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewModel.swift; sourceTree = "<group>"; };
+		ABB3D0F526CF909100722EB3 /* CenterDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDefine.swift; sourceTree = "<group>"; };
+		ABB3D0F826CF966800722EB3 /* CenterService+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CenterService+TargetType.swift"; path = "../../../../../../../../../Downloads/CenterService+TargetType.swift"; sourceTree = "<group>"; };
+		ABB3D0FA26CF9F3B00722EB3 /* CenterVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVO.swift; sourceTree = "<group>"; };
+		ABB3D0FC26CFAD7C00722EB3 /* CenterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterResponse.swift; sourceTree = "<group>"; };
 		ABFF9D7026CDF14600AF1C9E /* NaverMap_Pracite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverMap_Pracite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFF9D7326CDF14600AF1C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFF9D7526CDF14600AF1C9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,10 +38,6 @@
 		ABFF9D7C26CDF14700AF1C9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABFF9D7F26CDF14700AF1C9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABFF9D8126CDF14700AF1C9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABFF9D8726CE04DF00AF1C9E /* CenterListVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListVO.swift; sourceTree = "<group>"; };
-		ABFF9D8D26CE1AF500AF1C9E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		ABFF9D8F26CE1CA300AF1C9E /* CenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewModel.swift; sourceTree = "<group>"; };
-		ABFF9D9126CE20DC00AF1C9E /* Service+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+TargetType.swift"; sourceTree = "<group>"; };
 		CFCF93A262A1A99C71D04AB1 /* Pods_NaverMap_Pracite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaverMap_Pracite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E558934C891524AE5DF93B28 /* Pods-NaverMap_Pracite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverMap_Pracite.debug.xcconfig"; path = "Target Support Files/Pods-NaverMap_Pracite/Pods-NaverMap_Pracite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ABB3D0E626CF40A100722EB3 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */,
+				ABB3D0F826CF966800722EB3 /* CenterService+TargetType.swift */,
+				ABB3D0FC26CFAD7C00722EB3 /* CenterResponse.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
 		ABFF9D6726CDF14600AF1C9E = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +108,6 @@
 				ABFF9D8926CE059300AF1C9E /* ViewController */,
 				ABFF9D7326CDF14600AF1C9E /* AppDelegate.swift */,
 				ABFF9D7526CDF14600AF1C9E /* SceneDelegate.swift */,
-				ABFF9D7726CDF14600AF1C9E /* ViewController.swift */,
 				ABFF9D7926CDF14600AF1C9E /* Main.storyboard */,
 				ABFF9D7C26CDF14700AF1C9E /* Assets.xcassets */,
 				ABFF9D7E26CDF14700AF1C9E /* LaunchScreen.storyboard */,
@@ -106,6 +119,7 @@
 		ABFF9D8926CE059300AF1C9E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ABFF9D7726CDF14600AF1C9E /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -113,7 +127,7 @@
 		ABFF9D8A26CE059500AF1C9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ABFF9D8726CE04DF00AF1C9E /* CenterListVO.swift */,
+				ABB3D0FA26CF9F3B00722EB3 /* CenterVO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,7 +135,7 @@
 		ABFF9D8B26CE05C800AF1C9E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				ABFF9D8F26CE1CA300AF1C9E /* CenterViewModel.swift */,
+				ABB3D0F326CF807900722EB3 /* CenterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -129,8 +143,8 @@
 		ABFF9D8C26CE1AE000AF1C9E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				ABFF9D8D26CE1AF500AF1C9E /* Service.swift */,
-				ABFF9D9126CE20DC00AF1C9E /* Service+TargetType.swift */,
+				ABB3D0E626CF40A100722EB3 /* HTTP */,
+				ABB3D0F526CF909100722EB3 /* CenterDefine.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -249,13 +263,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB3D0FB26CF9F3B00722EB3 /* CenterVO.swift in Sources */,
+				ABB3D0F626CF909100722EB3 /* CenterDefine.swift in Sources */,
+				ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */,
 				ABFF9D7826CDF14600AF1C9E /* ViewController.swift in Sources */,
-				ABFF9D9226CE20DC00AF1C9E /* Service+TargetType.swift in Sources */,
+				ABB3D0F426CF807900722EB3 /* CenterViewModel.swift in Sources */,
 				ABFF9D7426CDF14600AF1C9E /* AppDelegate.swift in Sources */,
-				ABFF9D8E26CE1AF500AF1C9E /* Service.swift in Sources */,
-				ABFF9D9026CE1CA300AF1C9E /* CenterViewModel.swift in Sources */,
 				ABFF9D7626CDF14600AF1C9E /* SceneDelegate.swift in Sources */,
-				ABFF9D8826CE04DF00AF1C9E /* CenterListVO.swift in Sources */,
+				ABB3D0FD26CFAD7C00722EB3 /* CenterResponse.swift in Sources */,
+				ABB3D0F926CF966800722EB3 /* CenterService+TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
