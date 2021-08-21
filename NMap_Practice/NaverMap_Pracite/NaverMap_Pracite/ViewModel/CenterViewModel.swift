@@ -17,8 +17,8 @@ class CenterViewModel {
     
     var CenterViewObs = BehaviorSubject<CenterListVO?>(value: nil)
     
-    func requestCenter (page: Int, perPage: Int, completion: @escaping ()-> Void, failed: (()-> Void)? = nil) {
-        provider.request(.readCenter(page: page, perPage: perPage)) { result in
+    func requestCenter ( perPage: Int, completion: @escaping ()-> Void, failed: (()-> Void)? = nil) {
+        provider.request(.readCenter(perPage: perPage)) { result in
             switch result {
             case .success(let response):
                 do {

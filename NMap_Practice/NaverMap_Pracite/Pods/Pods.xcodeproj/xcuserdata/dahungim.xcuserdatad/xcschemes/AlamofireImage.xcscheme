@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "96031B7C0E3CA44888E2CF70D6D6BD43"
-               BuildableName = "Moya-ObjectMapper.framework"
-               BlueprintName = "Moya-ObjectMapper"
+               BlueprintIdentifier = "C9778AE8394BE451567650E0B239BA21"
+               BuildableName = "AlamofireImage.framework"
+               BlueprintName = "AlamofireImage"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

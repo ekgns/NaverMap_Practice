@@ -57,7 +57,6 @@ struct Center: Mappable {
         sigungu <- map["sigungu"]
         updatedAt <- map["updatedAt"]
         zipCode <- map["map[]"]
-        
     }
 }
 

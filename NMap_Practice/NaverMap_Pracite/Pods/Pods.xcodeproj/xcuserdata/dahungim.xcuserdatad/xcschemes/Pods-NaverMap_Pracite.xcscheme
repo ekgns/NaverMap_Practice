@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C313CD11371A3C8A8A01DA1C0EB59F54"
-               BuildableName = "Pods_NaverMap_Pracite.framework"
+               BuildableName = "Pods-NaverMap_Pracite.framework"
                BlueprintName = "Pods-NaverMap_Pracite"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

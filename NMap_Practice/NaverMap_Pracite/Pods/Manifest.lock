@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.4.3)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
   - Differentiator (4.0.1)
   - Kingfisher (6.3.1)
   - Moya (14.0.0):
@@ -37,6 +39,7 @@ PODS:
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - AlamofireImage (~> 4.1.0)
   - Kingfisher
   - Moya-ObjectMapper/RxSwift
   - NMapsMap
@@ -50,6 +53,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireImage
     - Differentiator
     - Kingfisher
     - Moya
@@ -66,6 +70,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
@@ -80,6 +85,6 @@ SPEC CHECKSUMS:
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 2a1cbfc383af856853da493a5f31a8c7d1df4fbf
+PODFILE CHECKSUM: a783143de905d60783c6755d0ab4a95a70c1bef6
 
 COCOAPODS: 1.10.2

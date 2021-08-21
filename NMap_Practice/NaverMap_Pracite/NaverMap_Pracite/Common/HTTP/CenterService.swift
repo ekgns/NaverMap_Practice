@@ -10,6 +10,6 @@ import Moya
 
 // 제공하는 기능 열거형으로 만든다
 enum CenterService {
-    case readCenter(page: Int, perPage: Int) // 코로나 검사 예방접종센터 조회 api라 read기능밖에 없음
+    case readCenter(perPage: Int?) // 코로나 검사 예방접종센터 조회 api라 read기능밖에 없음
 }
 
