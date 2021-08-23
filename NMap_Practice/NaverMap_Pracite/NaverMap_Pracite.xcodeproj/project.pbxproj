@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6798110BC374374A8E231800 /* Pods_NaverMap_Pracite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCF93A262A1A99C71D04AB1 /* Pods_NaverMap_Pracite.framework */; };
+		AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3AD51526D2778E0008899A /* CenterService+Helper.swift */; };
 		ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */; };
 		ABB3D0F426CF807900722EB3 /* CenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F326CF807900722EB3 /* CenterViewModel.swift */; };
 		ABB3D0F626CF909100722EB3 /* CenterDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F526CF909100722EB3 /* CenterDefine.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		000606C959EB57E7EF27737C /* Pods-NaverMap_Pracite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverMap_Pracite.release.xcconfig"; path = "Target Support Files/Pods-NaverMap_Pracite/Pods-NaverMap_Pracite.release.xcconfig"; sourceTree = "<group>"; };
+		AB3AD51526D2778E0008899A /* CenterService+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterService+Helper.swift"; sourceTree = "<group>"; };
 		ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
 		ABB3D0F326CF807900722EB3 /* CenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewModel.swift; sourceTree = "<group>"; };
 		ABB3D0F526CF909100722EB3 /* CenterDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDefine.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */,
 				ABB3D0F826CF966800722EB3 /* CenterService+TargetType.swift */,
 				ABB3D0FC26CFAD7C00722EB3 /* CenterResponse.swift */,
+				AB3AD51526D2778E0008899A /* CenterService+Helper.swift */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				ABFF9D7426CDF14600AF1C9E /* AppDelegate.swift in Sources */,
 				ABFF9D7626CDF14600AF1C9E /* SceneDelegate.swift in Sources */,
 				ABB3D0FD26CFAD7C00722EB3 /* CenterResponse.swift in Sources */,
+				AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */,
 				ABB3D0F926CF966800722EB3 /* CenterService+TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

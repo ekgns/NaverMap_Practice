@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "96031B7C0E3CA44888E2CF70D6D6BD43"
-               BuildableName = "Moya-ObjectMapper.framework"
+               BuildableName = "Moya_ObjectMapper.framework"
                BlueprintName = "Moya-ObjectMapper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

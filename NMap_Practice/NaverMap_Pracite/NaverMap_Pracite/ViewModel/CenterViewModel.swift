@@ -8,7 +8,9 @@
 import Foundation
 import RxSwift
 import Moya
-import SwiftyJSON
+import RxOptional
+import NMapsMap
+import RxDataSources
 
 class CenterViewModel {
     let disposeBag = DisposeBag()
@@ -17,13 +19,13 @@ class CenterViewModel {
     
     var CenterViewObs = BehaviorSubject<CenterListVO?>(value: nil)
     
-    func requestCenter ( perPage: Int, completion: @escaping ()-> Void, failed: (()-> Void)? = nil) {
+    func requestCenter ( perPage: Int?,
+                    completion: @escaping()->Void, failed: (()-> Void)? = nil) {
         provider.request(.readCenter(perPage: perPage)) { result in
             switch result {
             case .success(let response):
                 do {
-                    let res = try response.mapObject(CenterService<CenterListVO>.self)
-                    
+                    let res = try response.mapObject(CenterService.)
                 }
             }
         }
