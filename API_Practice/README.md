@@ -1,6 +1,9 @@
 # Moya_Practice
 
 ### 목표: Moya를 통해서 API 사용해 코로나 접종센터를 테이블 뷰에 뿌려준다
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/70513066/130564248-913053ca-bb76-4150-974e-5b0140315d1f.gif)
+
     1. 테이블 뷰 만들기
     2. pod 추가 
     3. Moya 이용해서 API사용 
