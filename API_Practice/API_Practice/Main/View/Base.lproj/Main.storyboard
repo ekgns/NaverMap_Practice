@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0xr-eI-xcL">
-                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="171" id="xWz-38-j1b" customClass="Cell" customModule="API_Practice" customModuleProvider="target">
@@ -75,25 +75,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OTy-ws-33T">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0xr-eI-xcL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Ny-sD-vQF"/>
-                            <constraint firstItem="OTy-ws-33T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W2Q-xA-OmC"/>
-                            <constraint firstItem="OTy-ws-33T" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cP8-bL-gM5"/>
-                            <constraint firstItem="0xr-eI-xcL" firstAttribute="top" secondItem="OTy-ws-33T" secondAttribute="bottom" id="hMm-Bf-UCP"/>
-                            <constraint firstItem="OTy-ws-33T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i2h-A8-qMK"/>
+                            <constraint firstItem="0xr-eI-xcL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E9f-Lk-DKa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xr-eI-xcL" secondAttribute="trailing" id="kFn-xi-hN8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0xr-eI-xcL" secondAttribute="bottom" id="nTv-D8-oHc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="OTy-ws-33T" id="7lV-ad-Qsq"/>
                         <outlet property="tableView" destination="0xr-eI-xcL" id="3J8-q5-1x3"/>
                     </connections>
                 </viewController>
