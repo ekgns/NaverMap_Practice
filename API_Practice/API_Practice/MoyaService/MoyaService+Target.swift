@@ -11,12 +11,17 @@ import ObjectMapper
 // 타켓타입으로 API 사용으로 네트워킹 메서드의 상세기능을 설정한다
 extension MoyaService: TargetType {
     // API 기본 URL
-    var baseURL: URL { return URL(string: "https://api.odcloud.kr/api/15077586/v1/centers?")!}
+    var baseURL: URL {
+        guard let url = URL(string: "https://api.odcloud.kr/api") else {
+            fatalError()
+        }
+        return url
+    }
     
     // 기능별 추가 되는 URL
     var path: String {
         switch self {
-        case .getCenterList(let page, let perPage): return ""
+        case .getCenterList: return "/15077586/v1/centers"
         }
     }
     
@@ -30,7 +35,7 @@ extension MoyaService: TargetType {
     // API가 해야할 일
     var task: Task {
         switch self {
-        case .getCenterList: return .requestPlain
+        case .getCenterList(let page, let perPage): return .requestParameters(parameters: ["page": page, "perPage": perPage], encoding: URLEncoding.default)
         }
     }
     

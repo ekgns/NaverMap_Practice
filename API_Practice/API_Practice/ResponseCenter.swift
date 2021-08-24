@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct CenterResponse<T:Mappable>: Mappable {
+struct ResponseCenter<T:Mappable>: Mappable {
     var status: String?
     var msg: String?
     var body: T?

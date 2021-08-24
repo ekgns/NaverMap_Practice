@@ -8,42 +8,42 @@
 import Foundation
 import ObjectMapper
 
-struct CenterVO: Mappable {
-    var currentCount: Int?
-    var data: [CenterModel]?
-    var matchCount: Int?
-    var page: Int?
-    var perPage: Int?
-    var totalCount: Int?
+struct CenterModel: Codable {
+    var currentCount: Int
+    var data: [Center]
+    var matchCount: Int
+    var page: Int
+    var perPage: Int
+    var totalCount: Int
     
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        currentCount <- map["currentCount"]
-        data         <- map["data"]
-        matchCount   <- map["matchCount"]
-        page         <- map["page"]
-        perPage      <- map["perPage"]
-        totalCount   <- map["totalCount"]
-    }
+//    init?(map: Map) {}
+//
+//    mutating func mapping(map: Map) {
+//        currentCount <- map["currentCount"]
+//        data         <- map["data"]
+//        matchCount   <- map["matchCount"]
+//        page         <- map["page"]
+//        perPage      <- map["perPage"]
+//        totalCount   <- map["totalCount"]
+//    }
 }
 
 
 
-struct CenterModel: Mappable {
-    var address: String?
-    var centerName: String?
-    var lat: String?
-    var lng: String?
+struct Center: Codable {
+    var address: String
+    var centerName: String
+    var lat: String
+    var lng: String
     
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        address    <- map["address"]
-        centerName <- map["centerName"]
-        lat        <- map["lat"]
-        lng        <- map["lng"]
-    }
+//    init?(map: Map) {}
+//
+//    mutating func mapping(map: Map) {
+//        address    <- map["address"]
+//        centerName <- map["centerName"]
+//        lat        <- map["lat"]
+//        lng        <- map["lng"]
+//    }
 }
 
 /*

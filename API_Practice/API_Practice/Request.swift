@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Request: Encodable {
+    var page: Int?
+    var perPage: Int?
+}
