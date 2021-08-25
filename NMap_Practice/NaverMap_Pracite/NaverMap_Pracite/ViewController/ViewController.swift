@@ -16,9 +16,14 @@ class ViewController: UIViewController  {
     let marker = NMFMarker()
     
     let viewModel = CenterViewModel()
+    var centers: [Center] = []
+    
+    var centerLat: Double = 0.0
+    var centerLng: Double = 0.0
     
     var lat: Double?
     var lng: Double?
+    
     
     @IBOutlet weak var mapView: NMFMapView!
     
@@ -31,7 +36,7 @@ class ViewController: UIViewController  {
         locationManager.startUpdatingLocation()
         moveCamera()
         currentLoactionOverray()
- 
+        getCenterList()
         
     }
     
@@ -43,6 +48,7 @@ class ViewController: UIViewController  {
         let coor = locationManager.location?.coordinate
         lat = coor?.latitude
         lng = coor?.longitude
+
     }
     
     func moveCamera() {
@@ -51,7 +57,27 @@ class ViewController: UIViewController  {
         mapView.moveCamera(cameraUpdate)
     }
     
-   
+    func getCenterList() {
+        viewModel.requestCenterList(page: 1, perPage: 1) { data in
+            self.centers = data.data
+                print("================================")
+            for (index, number) in self.centers.enumerated() {
+                print("\(index+1): \(number.lat)")
+                self.centerLat = Double(number.lat) ?? 0.0
+                self.centerLng = Double(number.lng) ?? 0.0
+                self.marker.position = NMGLatLng(lat: self.centerLat, lng: self.centerLng)
+                self.marker.mapView = self.mapView
+                print("\(self.marker)")
+                    }
+                print("================================")
+//            }
+        } failure: { error in
+            let alert = UIAlertController(title: nil, message: error, preferredStyle: .alert)
+            let action = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     func currentLoactionOverray() {
         mapView.positionMode = .direction
