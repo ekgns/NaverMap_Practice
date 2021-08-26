@@ -63,18 +63,20 @@ class ViewController: UIViewController  {
     
     func getCenterList() {
         viewModel.requestCenterList(page: 1, perPage: 284) { data in
-                print("================================")
             self.centers = data.data
             for (index, number) in self.centers.enumerated() {
-                let marker = NMFMarker()
-                marker.position = NMGLatLng(lat:(Double(number.lat) ?? 0.0), lng:(Double(number.lng) ?? 0.0))
-                print("lat: \(Double(number.lat) ?? 0.0) / lng: \(Double(number.lng) ?? 0.0)")
-                marker.mapView = self.mapView
+                
+                let infoWindow = NMFInfoWindow()
+                let dataSource = NMFInfoWindowDefaultTextSource.data()
+                dataSource.title = "\(number.centerName)"
+                infoWindow.dataSource = dataSource
+                
+//                let marker = NMFMarker()
+                infoWindow.position = NMGLatLng(lat:(Double(number.lat) ?? 0.0), lng:(Double(number.lng) ?? 0.0))
+                infoWindow.mapView = self.mapView
+                
                     }
-                print("================================")
-
-            
-//            }
+                
         } failure: { error in
             let alert = UIAlertController(title: nil, message: error, preferredStyle: .alert)
             let action = UIAlertAction(title: "확인", style: .default, handler: nil)
