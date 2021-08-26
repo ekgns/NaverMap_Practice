@@ -13,21 +13,27 @@ import NMapsMap
 import RxDataSources
 
 class CenterViewModel {
-    let disposeBag = DisposeBag()
-    let provider = MoyaProvider<CenterService>()
+    fileprivate let provider = MoyaProvider<CenterService>()
+    var disposBag = DisposeBag()
+    var centerObs:BehaviorSubject<[Center]> = BehaviorSubject<[Center]>(value: [])
     
-    
-    var CenterViewObs = BehaviorSubject<CenterListVO?>(value: nil)
-    
-    func requestCenter ( perPage: Int?,
-                    completion: @escaping()->Void, failed: (()-> Void)? = nil) {
-        provider.request(.readCenter(perPage: perPage)) { result in
+    func requestCenterList(page: Int, perPage: Int, completion: @escaping (CenterListVO)-> (), failure: @escaping (String)-> ()) {
+        provider.request(.getCenterList(page: page, perPage: perPage)) { result in
             switch result {
-            case .success(let response):
+            case let .success(reponse):
                 do {
-                    let res = try response.mapObject(CenterService.)
+                    let centerList = try JSONDecoder().decode(CenterListVO.self, from: reponse.data)
+                    completion(centerList)
+                } catch let error {
+                    print("여기로 들어옴\(result)")
+                    failure(error.localizedDescription)
                 }
+            case let .failure(error):
+
+                failure(error.localizedDescription)
             }
         }
     }
+    
+   
 }

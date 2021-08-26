@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		6798110BC374374A8E231800 /* Pods_NaverMap_Pracite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCF93A262A1A99C71D04AB1 /* Pods_NaverMap_Pracite.framework */; };
 		AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3AD51526D2778E0008899A /* CenterService+Helper.swift */; };
+		AB8A081026D5D90600F265DD /* CenterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A080F26D5D90600F265DD /* CenterResponse.swift */; };
+		AB8A081326D5DC6F00F265DD /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A081226D5DC6F00F265DD /* String+Currency.swift */; };
 		ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */; };
 		ABB3D0F426CF807900722EB3 /* CenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F326CF807900722EB3 /* CenterViewModel.swift */; };
-		ABB3D0F626CF909100722EB3 /* CenterDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F526CF909100722EB3 /* CenterDefine.swift */; };
 		ABB3D0F926CF966800722EB3 /* CenterService+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0F826CF966800722EB3 /* CenterService+TargetType.swift */; };
 		ABB3D0FB26CF9F3B00722EB3 /* CenterVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0FA26CF9F3B00722EB3 /* CenterVO.swift */; };
-		ABB3D0FD26CFAD7C00722EB3 /* CenterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0FC26CFAD7C00722EB3 /* CenterResponse.swift */; };
+		ABEE5C5326D4C99800D9CBF7 /* CenterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE5C5226D4C99800D9CBF7 /* CenterKey.swift */; };
 		ABFF9D7426CDF14600AF1C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D7326CDF14600AF1C9E /* AppDelegate.swift */; };
 		ABFF9D7626CDF14600AF1C9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D7526CDF14600AF1C9E /* SceneDelegate.swift */; };
 		ABFF9D7826CDF14600AF1C9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF9D7726CDF14600AF1C9E /* ViewController.swift */; };
@@ -26,12 +27,13 @@
 /* Begin PBXFileReference section */
 		000606C959EB57E7EF27737C /* Pods-NaverMap_Pracite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverMap_Pracite.release.xcconfig"; path = "Target Support Files/Pods-NaverMap_Pracite/Pods-NaverMap_Pracite.release.xcconfig"; sourceTree = "<group>"; };
 		AB3AD51526D2778E0008899A /* CenterService+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterService+Helper.swift"; sourceTree = "<group>"; };
+		AB8A080F26D5D90600F265DD /* CenterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterResponse.swift; sourceTree = "<group>"; };
+		AB8A081226D5DC6F00F265DD /* String+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
 		ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
 		ABB3D0F326CF807900722EB3 /* CenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewModel.swift; sourceTree = "<group>"; };
-		ABB3D0F526CF909100722EB3 /* CenterDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDefine.swift; sourceTree = "<group>"; };
 		ABB3D0F826CF966800722EB3 /* CenterService+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CenterService+TargetType.swift"; path = "../../../../../../../../../Downloads/CenterService+TargetType.swift"; sourceTree = "<group>"; };
 		ABB3D0FA26CF9F3B00722EB3 /* CenterVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVO.swift; sourceTree = "<group>"; };
-		ABB3D0FC26CFAD7C00722EB3 /* CenterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterResponse.swift; sourceTree = "<group>"; };
+		ABEE5C5226D4C99800D9CBF7 /* CenterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterKey.swift; sourceTree = "<group>"; };
 		ABFF9D7026CDF14600AF1C9E /* NaverMap_Pracite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverMap_Pracite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFF9D7326CDF14600AF1C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFF9D7526CDF14600AF1C9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,13 +75,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB8A081126D5DC5400F265DD /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A081226D5DC6F00F265DD /* String+Currency.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 		ABB3D0E626CF40A100722EB3 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
 				ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */,
 				ABB3D0F826CF966800722EB3 /* CenterService+TargetType.swift */,
-				ABB3D0FC26CFAD7C00722EB3 /* CenterResponse.swift */,
 				AB3AD51526D2778E0008899A /* CenterService+Helper.swift */,
+				ABEE5C5226D4C99800D9CBF7 /* CenterKey.swift */,
+				AB8A080F26D5D90600F265DD /* CenterResponse.swift */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -105,6 +116,7 @@
 		ABFF9D7226CDF14600AF1C9E /* NaverMap_Pracite */ = {
 			isa = PBXGroup;
 			children = (
+				AB8A081126D5DC5400F265DD /* Extention */,
 				ABFF9D8C26CE1AE000AF1C9E /* Common */,
 				ABFF9D8B26CE05C800AF1C9E /* ViewModel */,
 				ABFF9D8A26CE059500AF1C9E /* Model */,
@@ -147,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				ABB3D0E626CF40A100722EB3 /* HTTP */,
-				ABB3D0F526CF909100722EB3 /* CenterDefine.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -267,13 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB3D0FB26CF9F3B00722EB3 /* CenterVO.swift in Sources */,
-				ABB3D0F626CF909100722EB3 /* CenterDefine.swift in Sources */,
 				ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */,
 				ABFF9D7826CDF14600AF1C9E /* ViewController.swift in Sources */,
 				ABB3D0F426CF807900722EB3 /* CenterViewModel.swift in Sources */,
 				ABFF9D7426CDF14600AF1C9E /* AppDelegate.swift in Sources */,
+				AB8A081026D5D90600F265DD /* CenterResponse.swift in Sources */,
 				ABFF9D7626CDF14600AF1C9E /* SceneDelegate.swift in Sources */,
-				ABB3D0FD26CFAD7C00722EB3 /* CenterResponse.swift in Sources */,
+				AB8A081326D5DC6F00F265DD /* String+Currency.swift in Sources */,
+				ABEE5C5326D4C99800D9CBF7 /* CenterKey.swift in Sources */,
 				AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */,
 				ABB3D0F926CF966800722EB3 /* CenterService+TargetType.swift in Sources */,
 			);

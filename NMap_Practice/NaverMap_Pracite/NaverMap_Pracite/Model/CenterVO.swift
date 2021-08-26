@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ObjectMapper
 /*
            "address": "서울특별시 중구 을지로 39길 29",
            "centerName": "코로나19 중앙 예방접종센터",
@@ -24,61 +23,30 @@ import ObjectMapper
            "zipCode": "04562"
  */
 
-struct Center: Mappable {
-    var address: String?
-    var centerName: String?
-    var centerType: String?
-    var createdAt: String?
-    var facilityName: String?
-    var id: Int?
-    var lat: String?
-    var lng: String?
-    var org: String?
-    var phoneNumber: String?
-    var sido: String?
-    var sigungu:String?
-    var updatedAt: String?
-    var zipCode: String?
+struct Center: Codable {
+    var address: String
+    var centerName: String
+    var centerType: String
+    var createdAt: String
+    var facilityName: String
+    var id: Int
+    var lat: String
+    var lng: String
+    var org: String
+    var phoneNumber: String
+    var sido: String
+    var sigungu:String
+    var updatedAt: String
+    var zipCode: String
     
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        address <- map["address"]
-        centerName <- map["centerName"]
-        centerType <- map["centerType"]
-        createdAt <- map["createdAt"]
-        facilityName <- map["facilityName"]
-        id <- map["id"]
-        lat <- map["lat"]
-        lng <- map["lng"]
-        org <- map["org"]
-        phoneNumber <- map["phoneNumber"]
-        sido <- map["sido"]
-        sigungu <- map["sigungu"]
-        updatedAt <- map["updatedAt"]
-        zipCode <- map["map[]"]
-    }
+  
 }
 
-
-struct CenterListVO: Mappable {
-    var currentCount: Int?
-    var data: [Center]?
-    var matchCount: Int?
-    var page: Int?
-    var perPage: Int?
-    var totalCount: Int?
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        currentCount <- map["currentCount"]
-        data <- map["Center"]
-        matchCount <- map["matchCount"]
-        page <- map["page"]
-        perPage <- map["perPage"]
-        totalCount <- map["totalCount"]
-        
-        
-    }
+struct CenterListVO: Codable {
+    var currentCount: Int
+    var data: [Center]
+    var matchCount: Int
+    var page: Int
+    var perPage: Int
+    var totalCount: Int
 }

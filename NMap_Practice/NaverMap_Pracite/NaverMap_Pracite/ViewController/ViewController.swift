@@ -8,18 +8,20 @@
 import UIKit
 import CoreLocation
 import NMapsMap
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController  {
     
+    let viewModel = CenterViewModel()
+    
     var locationManager:CLLocationManager!
     
-    let marker = NMFMarker()
-    
-    let viewModel = CenterViewModel()
     var centers: [Center] = []
     
-    var centerLat: Double = 0.0
-    var centerLng: Double = 0.0
+    
+    
+    
     
     var lat: Double?
     var lng: Double?
@@ -57,19 +59,21 @@ class ViewController: UIViewController  {
         mapView.moveCamera(cameraUpdate)
     }
     
+    
+    
     func getCenterList() {
-        viewModel.requestCenterList(page: 1, perPage: 1) { data in
-            self.centers = data.data
+        viewModel.requestCenterList(page: 1, perPage: 284) { data in
                 print("================================")
+            self.centers = data.data
             for (index, number) in self.centers.enumerated() {
-                print("\(index+1): \(number.lat)")
-                self.centerLat = Double(number.lat) ?? 0.0
-                self.centerLng = Double(number.lng) ?? 0.0
-                self.marker.position = NMGLatLng(lat: self.centerLat, lng: self.centerLng)
-                self.marker.mapView = self.mapView
-                print("\(self.marker)")
+                let marker = NMFMarker()
+                marker.position = NMGLatLng(lat:(Double(number.lat) ?? 0.0), lng:(Double(number.lng) ?? 0.0))
+                print("lat: \(Double(number.lat) ?? 0.0) / lng: \(Double(number.lng) ?? 0.0)")
+                marker.mapView = self.mapView
                     }
                 print("================================")
+
+            
 //            }
         } failure: { error in
             let alert = UIAlertController(title: nil, message: error, preferredStyle: .alert)
@@ -78,6 +82,9 @@ class ViewController: UIViewController  {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+   
+    
     
     func currentLoactionOverray() {
         mapView.positionMode = .direction
