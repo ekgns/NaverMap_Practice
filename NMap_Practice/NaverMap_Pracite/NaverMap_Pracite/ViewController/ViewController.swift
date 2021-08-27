@@ -94,8 +94,12 @@ class ViewController: UIViewController  {
         // 정보창 위치 표시
         infoWindow.position = NMGLatLng(lat: lat , lng: lng)
         
+        
+        infoWindow.minZoom = 12
+        self.mapView.minZoomLevel = 12
         // 센터 위치 맵에 표시
         infoWindow.mapView = self.mapView
+        
     }
     
     func currentLoactionOverray() {

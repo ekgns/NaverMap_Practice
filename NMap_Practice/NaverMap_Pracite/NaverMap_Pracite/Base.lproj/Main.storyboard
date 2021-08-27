@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="0il-UY-yeV">
             <objects>
-                <viewController id="6Z3-EM-4eo" customClass="ViewController" customModule="NaverMap_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Z3-EM-4eo" customClass="ViewController" customModule="NaverMap_Pracite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pHZ-Ns-mni">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,8 +98,8 @@
                                             <color key="titleColor" systemColor="linkColor"/>
                                         </state>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="장소를 검색해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m0-rb-0tN">
-                                        <rect key="frame" x="62" y="22.5" width="239" height="19"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="장소를 검색해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m0-rb-0tN">
+                                        <rect key="frame" x="62" y="22.5" width="113" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -113,7 +113,7 @@
                                 <constraints>
                                     <constraint firstItem="UF0-Nx-6o9" firstAttribute="top" secondItem="10u-yJ-BYs" secondAttribute="top" constant="10" id="1mS-6i-WVY"/>
                                     <constraint firstItem="fLI-bZ-Q6p" firstAttribute="top" secondItem="UF0-Nx-6o9" secondAttribute="bottom" constant="5" id="2PQ-s1-pv5"/>
-                                    <constraint firstItem="4m0-rb-0tN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gvh-rH-mxK" secondAttribute="trailing" constant="8" symbolic="YES" id="6cZ-8y-dKN"/>
+                                    <constraint firstItem="4m0-rb-0tN" firstAttribute="leading" secondItem="gvh-rH-mxK" secondAttribute="trailing" constant="8" symbolic="YES" id="6cZ-8y-dKN"/>
                                     <constraint firstItem="UF0-Nx-6o9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4m0-rb-0tN" secondAttribute="trailing" constant="8" symbolic="YES" id="6dG-Fc-eo9"/>
                                     <constraint firstItem="gvh-rH-mxK" firstAttribute="leading" secondItem="10u-yJ-BYs" secondAttribute="leading" constant="10" id="9KL-Eh-VPh"/>
                                     <constraint firstItem="4m0-rb-0tN" firstAttribute="centerY" secondItem="gvh-rH-mxK" secondAttribute="centerY" id="Kfe-ek-gMO"/>
