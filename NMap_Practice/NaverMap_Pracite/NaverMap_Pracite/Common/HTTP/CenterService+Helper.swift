@@ -51,4 +51,41 @@ extension CenterService {
             }
         }
     }
+    
+    static func checkResponse<T: Mappable> (_ res: CenterResponse<T>,
+                                            _ filterSuccess: [StatusCode] = [.success],
+                                            onOk:(()->Void)? = nil ) -> Bool {
+        
+        guard let status = res.status else {
+            Popup.shared.show(type: .Warning,
+                              buttonCount: .one,
+                              title: "서버 오류",
+                              desc: "서버가 불안정합니다.\n빠른 시일내에 복구할게요!",
+                              onOk: onOk)
+            return false
+        }
+        
+        let r = StatusCode(rawValue: status)
+        for b in filterSuccess {
+            if r == b {
+                return true
+            }
+        }
+        
+        // 423 토큰만료
+        if r == StatusCode.locked {
+            TazoRealm.logout()
+            return false
+        }
+        
+        Log.sendCrashlytics(code: -1003, userInfo: ["response":res])
+        Log.debug("server error occurred.")
+        
+        Popup.shared.show(type: .Warning,
+                          buttonCount: .one,
+                          title: "서버 오류",
+                          desc: "\(r!.description)",
+                          onOk: onOk)
+        return false
+    }
 }

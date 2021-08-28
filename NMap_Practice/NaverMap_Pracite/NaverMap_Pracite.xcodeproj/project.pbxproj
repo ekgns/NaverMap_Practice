@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6798110BC374374A8E231800 /* Pods_NaverMap_Pracite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCF93A262A1A99C71D04AB1 /* Pods_NaverMap_Pracite.framework */; };
+		AB253CDE26D8E40F00F08C99 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB253CDD26D8E40F00F08C99 /* Popup.swift */; };
+		AB253CE126D8E52500F08C99 /* PopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB253CE026D8E52500F08C99 /* PopupViewModel.swift */; };
 		AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3AD51526D2778E0008899A /* CenterService+Helper.swift */; };
+		AB4CBE2C26DA7BBE00C26E61 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CBE2B26DA7BBE00C26E61 /* BaseViewController.swift */; };
 		AB8A081026D5D90600F265DD /* CenterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A080F26D5D90600F265DD /* CenterResponse.swift */; };
 		AB8A081326D5DC6F00F265DD /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A081226D5DC6F00F265DD /* String+Currency.swift */; };
 		ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */; };
@@ -26,7 +29,10 @@
 
 /* Begin PBXFileReference section */
 		000606C959EB57E7EF27737C /* Pods-NaverMap_Pracite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverMap_Pracite.release.xcconfig"; path = "Target Support Files/Pods-NaverMap_Pracite/Pods-NaverMap_Pracite.release.xcconfig"; sourceTree = "<group>"; };
+		AB253CDD26D8E40F00F08C99 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		AB253CE026D8E52500F08C99 /* PopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewModel.swift; sourceTree = "<group>"; };
 		AB3AD51526D2778E0008899A /* CenterService+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterService+Helper.swift"; sourceTree = "<group>"; };
+		AB4CBE2B26DA7BBE00C26E61 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AB8A080F26D5D90600F265DD /* CenterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterResponse.swift; sourceTree = "<group>"; };
 		AB8A081226D5DC6F00F265DD /* String+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
 		ABB3D0EF26CF7C8200722EB3 /* CenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterService.swift; sourceTree = "<group>"; };
@@ -75,6 +81,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB253CDC26D8E3FC00F08C99 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AB253CDD26D8E40F00F08C99 /* Popup.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AB253CDF26D8E50900F08C99 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				AB253CE026D8E52500F08C99 /* PopupViewModel.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		AB4CBE2A26DA7BA900C26E61 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB4CBE2B26DA7BBE00C26E61 /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		AB8A081126D5DC5400F265DD /* Extention */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +146,7 @@
 		ABFF9D7226CDF14600AF1C9E /* NaverMap_Pracite */ = {
 			isa = PBXGroup;
 			children = (
+				AB253CDF26D8E50900F08C99 /* Popup */,
 				AB8A081126D5DC5400F265DD /* Extention */,
 				ABFF9D8C26CE1AE000AF1C9E /* Common */,
 				ABFF9D8B26CE05C800AF1C9E /* ViewModel */,
@@ -158,6 +189,8 @@
 		ABFF9D8C26CE1AE000AF1C9E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AB4CBE2A26DA7BA900C26E61 /* ViewController */,
+				AB253CDC26D8E3FC00F08C99 /* Util */,
 				ABB3D0E626CF40A100722EB3 /* HTTP */,
 			);
 			path = Common;
@@ -278,15 +311,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB3D0FB26CF9F3B00722EB3 /* CenterVO.swift in Sources */,
+				AB253CE126D8E52500F08C99 /* PopupViewModel.swift in Sources */,
 				ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */,
 				ABFF9D7826CDF14600AF1C9E /* ViewController.swift in Sources */,
 				ABB3D0F426CF807900722EB3 /* CenterViewModel.swift in Sources */,
+				AB4CBE2C26DA7BBE00C26E61 /* BaseViewController.swift in Sources */,
 				ABFF9D7426CDF14600AF1C9E /* AppDelegate.swift in Sources */,
 				AB8A081026D5D90600F265DD /* CenterResponse.swift in Sources */,
 				ABFF9D7626CDF14600AF1C9E /* SceneDelegate.swift in Sources */,
 				AB8A081326D5DC6F00F265DD /* String+Currency.swift in Sources */,
 				ABEE5C5326D4C99800D9CBF7 /* CenterKey.swift in Sources */,
 				AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */,
+				AB253CDE26D8E40F00F08C99 /* Popup.swift in Sources */,
 				ABB3D0F926CF966800722EB3 /* CenterService+TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

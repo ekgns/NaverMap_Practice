@@ -12,17 +12,10 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController  {
-    
     let viewModel = CenterViewModel()
-    
     var locationManager:CLLocationManager!
-    
     var centers: [Center] = []
-    
-    
-    
-    
-    
+
     var lat: Double?
     var lng: Double?
     
