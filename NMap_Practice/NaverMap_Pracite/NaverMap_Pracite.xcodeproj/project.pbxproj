@@ -10,6 +10,11 @@
 		6798110BC374374A8E231800 /* Pods_NaverMap_Pracite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCF93A262A1A99C71D04AB1 /* Pods_NaverMap_Pracite.framework */; };
 		AB253CDE26D8E40F00F08C99 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB253CDD26D8E40F00F08C99 /* Popup.swift */; };
 		AB253CE126D8E52500F08C99 /* PopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB253CE026D8E52500F08C99 /* PopupViewModel.swift */; };
+		AB38BFE526DB4915003B4DA9 /* HJLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38BFE426DB4915003B4DA9 /* HJLayoutConstraint.swift */; };
+		AB38BFE726DB4B08003B4DA9 /* UIColor+Tazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38BFE626DB4B08003B4DA9 /* UIColor+Tazo.swift */; };
+		AB38BFE926DB4D6E003B4DA9 /* UIViewConrollerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38BFE826DB4D6E003B4DA9 /* UIViewConrollerExt.swift */; };
+		AB38BFEB26DB4DDB003B4DA9 /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38BFEA26DB4DDB003B4DA9 /* BasePopupViewController.swift */; };
+		AB38BFED26DB4E28003B4DA9 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38BFEC26DB4E28003B4DA9 /* NSObject.swift */; };
 		AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3AD51526D2778E0008899A /* CenterService+Helper.swift */; };
 		AB4CBE2C26DA7BBE00C26E61 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CBE2B26DA7BBE00C26E61 /* BaseViewController.swift */; };
 		AB8A081026D5D90600F265DD /* CenterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A080F26D5D90600F265DD /* CenterResponse.swift */; };
@@ -31,6 +36,11 @@
 		000606C959EB57E7EF27737C /* Pods-NaverMap_Pracite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverMap_Pracite.release.xcconfig"; path = "Target Support Files/Pods-NaverMap_Pracite/Pods-NaverMap_Pracite.release.xcconfig"; sourceTree = "<group>"; };
 		AB253CDD26D8E40F00F08C99 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		AB253CE026D8E52500F08C99 /* PopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewModel.swift; sourceTree = "<group>"; };
+		AB38BFE426DB4915003B4DA9 /* HJLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJLayoutConstraint.swift; sourceTree = "<group>"; };
+		AB38BFE626DB4B08003B4DA9 /* UIColor+Tazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Tazo.swift"; sourceTree = "<group>"; };
+		AB38BFE826DB4D6E003B4DA9 /* UIViewConrollerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConrollerExt.swift; sourceTree = "<group>"; };
+		AB38BFEA26DB4DDB003B4DA9 /* BasePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePopupViewController.swift; sourceTree = "<group>"; };
+		AB38BFEC26DB4E28003B4DA9 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		AB3AD51526D2778E0008899A /* CenterService+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterService+Helper.swift"; sourceTree = "<group>"; };
 		AB4CBE2B26DA7BBE00C26E61 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AB8A080F26D5D90600F265DD /* CenterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterResponse.swift; sourceTree = "<group>"; };
@@ -85,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				AB253CDD26D8E40F00F08C99 /* Popup.swift */,
+				AB38BFE426DB4915003B4DA9 /* HJLayoutConstraint.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -101,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4CBE2B26DA7BBE00C26E61 /* BaseViewController.swift */,
+				AB38BFEA26DB4DDB003B4DA9 /* BasePopupViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -109,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				AB8A081226D5DC6F00F265DD /* String+Currency.swift */,
+				AB38BFE626DB4B08003B4DA9 /* UIColor+Tazo.swift */,
+				AB38BFE826DB4D6E003B4DA9 /* UIViewConrollerExt.swift */,
+				AB38BFEC26DB4E28003B4DA9 /* NSObject.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -313,16 +328,21 @@
 				ABB3D0FB26CF9F3B00722EB3 /* CenterVO.swift in Sources */,
 				AB253CE126D8E52500F08C99 /* PopupViewModel.swift in Sources */,
 				ABB3D0F026CF7C8200722EB3 /* CenterService.swift in Sources */,
+				AB38BFE926DB4D6E003B4DA9 /* UIViewConrollerExt.swift in Sources */,
+				AB38BFE726DB4B08003B4DA9 /* UIColor+Tazo.swift in Sources */,
+				AB38BFE526DB4915003B4DA9 /* HJLayoutConstraint.swift in Sources */,
 				ABFF9D7826CDF14600AF1C9E /* ViewController.swift in Sources */,
 				ABB3D0F426CF807900722EB3 /* CenterViewModel.swift in Sources */,
 				AB4CBE2C26DA7BBE00C26E61 /* BaseViewController.swift in Sources */,
 				ABFF9D7426CDF14600AF1C9E /* AppDelegate.swift in Sources */,
+				AB38BFEB26DB4DDB003B4DA9 /* BasePopupViewController.swift in Sources */,
 				AB8A081026D5D90600F265DD /* CenterResponse.swift in Sources */,
 				ABFF9D7626CDF14600AF1C9E /* SceneDelegate.swift in Sources */,
 				AB8A081326D5DC6F00F265DD /* String+Currency.swift in Sources */,
 				ABEE5C5326D4C99800D9CBF7 /* CenterKey.swift in Sources */,
 				AB3AD51626D2778E0008899A /* CenterService+Helper.swift in Sources */,
 				AB253CDE26D8E40F00F08C99 /* Popup.swift in Sources */,
+				AB38BFED26DB4E28003B4DA9 /* NSObject.swift in Sources */,
 				ABB3D0F926CF966800722EB3 /* CenterService+TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import NMapsMap
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController  {
+class ViewController: BaseViewController  {
     let viewModel = CenterViewModel()
     var locationManager:CLLocationManager!
     var centers: [Center] = []
