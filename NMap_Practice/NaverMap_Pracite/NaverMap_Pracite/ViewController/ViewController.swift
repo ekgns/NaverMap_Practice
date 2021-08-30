@@ -56,7 +56,7 @@ class ViewController: BaseViewController  {
     
     
     func getCenterList() {
-        viewModel.requestCenterList(page: 1, perPage: 284) { data in // 뷰 모델에 있는 리퀘스트 쏀터 리스트 사용 성공시 넘어오는 데이터 data 안에 넣어줌
+        viewModel.requestCenterList(page: 1, perPage: 284) { data in // 뷰 모델에 있는 리퀘스트 센터 리스트 사용 성공시 넘어오는 데이터 data 안에 넣어줌
             // 넘어온 data는 CenterListVO타입의 배열
             self.centers = data.data // 전역에 선언한 Center 배열 타입의 centers에 data에 넣어서 넘어온 CenterListVO안의 Center 배열을 넣어준다
             for (_, center) in self.centers.enumerated() { // 인덱스 번호만큼 반복/  Centers의 값에서 원하는값을 뽑아 사용 한다

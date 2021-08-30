@@ -7,6 +7,7 @@
 
 import Foundation
 import ObjectMapper
+import Moya
 /*
            "address": "서울특별시 중구 을지로 39길 29",
            "centerName": "코로나19 중앙 예방접종센터",
@@ -23,9 +24,35 @@ import ObjectMapper
            "updatedAt": "2021-07-16 04:55:08",
            "zipCode": "04562"
  */
-struct Center: Mappable {
-   
-    
+struct Center: Codable {
+    var address: String
+    var centerName: String
+    var centerType: String
+    var createdAt: String
+    var facilityName: String
+    var id: Int
+    var lat: String
+    var lng: String
+    var org: String
+    var phoneNumber: String
+    var sido: String
+    var sigungu:String
+    var updatedAt: String
+    var zipCode: String
+
+
+}
+
+struct CenterListVO: Codable {
+    var currentCount: Int
+    var data: [Center]
+    var matchCount: Int
+    var page: Int
+    var perPage: Int
+    var totalCount: Int
+}
+
+struct CenterMap:Mappable {
     var address: String?
     var centerName: String?
     var centerType: String?
@@ -40,9 +67,11 @@ struct Center: Mappable {
     var sigungu:String?
     var updatedAt: String?
     var zipCode: String?
-    
-    init?(map: Map) {}
-    
+
+    init?(map: Map) {
+
+    }
+
     mutating func mapping(map: Map) {
         address <- map["address"]
         centerName <- map["centerName"]
@@ -59,19 +88,19 @@ struct Center: Mappable {
         updatedAt <- map["updateAt"]
         zipCode <- map["zipCode"]
     }
-  
+
 }
 
-struct CenterListVO: Mappable {
+struct CenterListVOMap:Mappable {
     var currentCount: Int?
     var data: [Center]?
     var matchCount: Int?
     var page: Int?
     var perPage: Int?
     var totalCount: Int?
-    
+
     init?(map: Map) {}
-    
+
     mutating func mapping(map: Map) {
         currentCount <- map["currentCount"]
         data <- map["data"]
@@ -81,32 +110,3 @@ struct CenterListVO: Mappable {
         totalCount <- map["totalCount"]
     }
 }
-
-
-//struct Center: Codable {
-//    var address: String
-//    var centerName: String
-//    var centerType: String
-//    var createdAt: String
-//    var facilityName: String
-//    var id: Int
-//    var lat: String
-//    var lng: String
-//    var org: String
-//    var phoneNumber: String
-//    var sido: String
-//    var sigungu:String
-//    var updatedAt: String
-//    var zipCode: String
-//
-//
-//}
-//
-//struct CenterListVO: Codable {
-//    var currentCount: Int
-//    var data: [Center]
-//    var matchCount: Int
-//    var page: Int
-//    var perPage: Int
-//    var totalCount: Int
-//}

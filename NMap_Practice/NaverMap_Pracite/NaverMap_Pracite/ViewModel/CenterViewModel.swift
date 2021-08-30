@@ -6,45 +6,46 @@
 //
 
 import Foundation
-import RxSwift
 import Moya
+import RxSwift
 import RxOptional
-import NMapsMap
-import RxDataSources
+import RxCocoa
+
 
 
 class CenterViewModel {
-    fileprivate let provider = MoyaProvider<CenterService>()
-    var disposBag = DisposeBag()
+    let disposBag = DisposeBag()
+    let provider = MoyaProvider<CenterService>()
     
-    
-    var centerObs = BehaviorSubject<CenterListVO?>(value:nil)
-    func requestCenterList(page: Int, perPage: Int, completion: @escaping (CenterListVO)-> (), failure: @escaping (String)-> ()) {
-        provider.request(.getCenterList(page: page, perPage: perPage)) { result in
-            switch result {
-            case  .success(let response):
-                do {
-                    let centerList = try response.mapObject(CenterResponse<CenterListVO>.self)
-                    if CenterService<>
-                    completion(centerList)
-                } catch let error {
-                    print("여기로 들어옴\(result)")
-                    failure(error.localizedDescription)
-                }
-            case let .failure(error):
+    let centerObs = BehaviorSubject<CenterListVO?>(value:nil)
 
-                failure(error.localizedDescription)
+    func requestMainView (page: Int,
+                          perPage: Int,
+                          completion: @escaping ()->Void
+                          , failed:(()->Void)? = nil ) {
+        provider.request(.getCenterList(page: page, perPage: perPage)) { (result) in
+            switch result {
+            case .success(let response):
+                
+                CenterService.showFailure(error)
+                failed?()
+                
+            case let .failure(error):
+                CenterService.showFailure(error)
+                failed?()
             }
         }
     }
-    
+
     
 //    func requestCenterList(page: Int, perPage: Int, completion: @escaping (CenterListVO)-> (), failure: @escaping (String)-> ()) {
 //        provider.request(.getCenterList(page: page, perPage: perPage)) { result in
 //            switch result {
-//            case  .success(reponse):
+//            case  .success(let response):
 //                do {
-//                    let centerList = try JSONDecoder().decode(CenterListVO.self, from: reponse.data)
+//
+//                    print("\(result) ,/////// \(response)")
+//                    let centerList = try JSONDecoder().decode(CenterListVO.self, from: response.data)
 //                    completion(centerList)
 //                } catch let error {
 //                    print("여기로 들어옴\(result)")

@@ -52,16 +52,10 @@ extension CenterService {
         }
     }
     
-    static func checkResponse<T: Mappable> (_ res: CenterResponse<T>,
-                                            _ filterSuccess: [StatusCode] = [.success],
-                                            onOk:(()->Void)? = nil ) -> Bool {
+    static func checkResponseWithoutPopup<T: Mappable> (_ res: CenterResponse<T>,
+                                                        _ filterSuccess: [StatusCode] = [.success]) -> Bool {
         
         guard let status = res.status else {
-            Popup.shared.show(type: .Warning,
-                              buttonCount: .one,
-                              title: "서버 오류",
-                              desc: "서버가 불안정합니다.\n빠른 시일내에 복구할게요!",
-                              onOk: onOk)
             return false
         }
         
@@ -72,20 +66,64 @@ extension CenterService {
             }
         }
         
-        // 423 토큰만료
-        if r == StatusCode.locked {
-            TazoRealm.logout()
+        return false
+    }
+    
+    
+    static func checkResponse<T: Mappable> (_ res: CenterResponse<T>,
+                                            _ filterSuccess: [StatusCode] = [.success],
+                                            onOk:(()->Void)? = nil ) -> Bool {
+        
+        guard let status = res.status else {
+
+            print("서버가 불안정합니다.\n빠른 시일내에 복구할게요")
             return false
         }
         
-        Log.sendCrashlytics(code: -1003, userInfo: ["response":res])
-        Log.debug("server error occurred.")
+        let r = StatusCode(rawValue: status)
+        for b in filterSuccess {
+            if r == b {
+                return true
+            }
+        }
         
-        Popup.shared.show(type: .Warning,
-                          buttonCount: .one,
-                          title: "서버 오류",
-                          desc: "\(r!.description)",
-                          onOk: onOk)
+        
+        print("서버 오류")
         return false
     }
+    
+    static func checkResponse<T: Mappable> (_ res: CenterArrayResponse<T>,
+                                            _ filterSuccess: [StatusCode] = [.success],
+                                            onOk:(()->Void)? = nil) -> Bool {
+        
+        guard let status = res.status else {
+            print("서버가 불안정합니다.\n빠른 시일내에 복구할게요")
+            return false
+        }
+        
+        let r = StatusCode(rawValue: status)
+        for b in filterSuccess {
+            if r == b {
+                return true
+            }
+        }
+        
+      
+        
+        guard let _ = res.body else {
+            print("서버가 불안정합니다.\n빠른 시일내에 복구할게요")
+            return false
+        }
+        
+        
+        print("서버 오류")
+        return false
+    }
+    
+    
+    
+    static func showFailure(_ error:Error, onOk:(()->Void)? = nil) {
+        print("서버와의 통신이 원활하지 않습니다.")
+    }
+    
 }

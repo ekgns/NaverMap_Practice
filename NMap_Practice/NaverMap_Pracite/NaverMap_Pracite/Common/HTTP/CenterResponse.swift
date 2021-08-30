@@ -22,7 +22,7 @@ struct CenterResponse<T: Mappable>: Mappable {
     }
 }
 
-struct CenterArray<T: Mappable>: Mappable {
+struct CenterArrayResponse<T: Mappable>: Mappable {
     var status: String?
     var msg: String?
     var body: T?
