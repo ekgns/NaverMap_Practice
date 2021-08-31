@@ -6,7 +6,7 @@
 //
 
 import Moya
-import ObjectMapper
+
 
 // 타켓타입으로 API 사용으로 네트워킹 메서드의 상세기능을 설정한다
 extension MoyaService: TargetType {

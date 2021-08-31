@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import UIKit
+
+class Cell: UITableViewCell {
+    @IBOutlet weak var centerName: UILabel!
+    @IBOutlet weak var adress: UILabel!
+    @IBOutlet weak var lat: UILabel!
+    @IBOutlet weak var lng: UILabel!
+    
+}

@@ -8,43 +8,83 @@
 import Foundation
 import ObjectMapper
 
-struct CenterModel: Codable {
-    var currentCount: Int
-    var data: [Center]
-    var matchCount: Int
-    var page: Int
-    var perPage: Int
-    var totalCount: Int
+struct CenterModel: Mappable {
+    var currentCount: Int?
+    var data: [Center]?
+    var matchCount: Int?
+    var page: Int?
+    var perPage: Int?
+    var totalCount: Int?
     
-//    init?(map: Map) {}
-//
-//    mutating func mapping(map: Map) {
-//        currentCount <- map["currentCount"]
-//        data         <- map["data"]
-//        matchCount   <- map["matchCount"]
-//        page         <- map["page"]
-//        perPage      <- map["perPage"]
-//        totalCount   <- map["totalCount"]
-//    }
+    init?(map: Map) {}
+
+    mutating func mapping(map: Map) {
+        currentCount <- map["currentCount"]
+        data         <- map["data"]
+        matchCount   <- map["matchCount"]
+        page         <- map["page"]
+        perPage      <- map["perPage"]
+        totalCount   <- map["totalCount"]
+    }
+}
+
+
+struct Center: Mappable {
+    var address: String?
+    var centerName: String?
+    var lat: String?
+    var lng: String?
+    
+    init?(map: Map) {}
+
+    mutating func mapping(map: Map) {
+        address    <- map["address"]
+        centerName <- map["centerName"]
+        lat        <- map["lat"]
+        lng        <- map["lng"]
+    }
 }
 
 
 
-struct Center: Codable {
-    var address: String
-    var centerName: String
-    var lat: String
-    var lng: String
-    
-//    init?(map: Map) {}
+
+//struct CenterModel: Codable {
+//    var currentCount: Int
+//    var data: [Center]
+//    var matchCount: Int
+//    var page: Int
+//    var perPage: Int
+//    var totalCount: Int
 //
-//    mutating func mapping(map: Map) {
-//        address    <- map["address"]
-//        centerName <- map["centerName"]
-//        lat        <- map["lat"]
-//        lng        <- map["lng"]
-//    }
-}
+////    init?(map: Map) {}
+////
+////    mutating func mapping(map: Map) {
+////        currentCount <- map["currentCount"]
+////        data         <- map["data"]
+////        matchCount   <- map["matchCount"]
+////        page         <- map["page"]
+////        perPage      <- map["perPage"]
+////        totalCount   <- map["totalCount"]
+////    }
+//}
+//
+
+//
+//struct Center: Codable {
+//    var address: String
+//    var centerName: String
+//    var lat: String
+//    var lng: String
+//
+////    init?(map: Map) {}
+////
+////    mutating func mapping(map: Map) {
+////        address    <- map["address"]
+////        centerName <- map["centerName"]
+////        lat        <- map["lat"]
+////        lng        <- map["lng"]
+////    }
+//}
 
 /*
  address": "충청남도 천안시 동남구 천안대로 357",

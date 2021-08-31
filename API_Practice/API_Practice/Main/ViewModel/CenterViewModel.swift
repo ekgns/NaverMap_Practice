@@ -6,8 +6,12 @@
 //
 
 import Moya
-import ObjectMapper
+import RxCocoa
 import RxSwift
+import Moya_ObjectMapper
+import RxOptional
+import Foundation
+
 //class CenterDataManager {
 //    func RequestCenterList(page: Int, perPager: Int, delegate: ViewController) {
 //        let url = "\(Constant.BASE_URL)/15077586/v1/centers?" + "&page=\(page)" + "&perpage=\(perPager)"
@@ -31,24 +35,51 @@ import RxSwift
 //    }
 //}
 
+//class CenterViewModel {
+//    fileprivate let provider = MoyaProvider<MoyaService>()
+//    func requestCenterList(page: Int
+//                           , perPage: Int
+//                           , completion: @escaping (CenterModel)-> Void
+//                           , failure: @escaping (String)-> ()) {
+//        provider.request(.getCenterList(page: page, perPage: perPage)) { result in
+//            switch result {
+//            case let .success(reponse):
+//                do {
+//                    let centerList = try JSONDecoder().decode(CenterModel.self, from: reponse.data)
+//                    completion(centerList)
+//                } catch let error {
+//                    print("여기로 들어옴\(result)")
+//                    failure(error.localizedDescription)
+//                }
+//            case let .failure(error):
+//
+//                failure(error.localizedDescription)
+//            }
+//        }
+//    }
+//}
+
 class CenterViewModel {
-    let disposeBag = DisposeBag()
+    let provider = MoyaProvider<MoyaService>()
     
-    fileprivate let provider = MoyaProvider<MoyaService>()
-    func requestCenterList(page: Int, perPage: Int, completion: @escaping (CenterModel)-> (), failure: @escaping (String)-> ()) {
-        provider.request(.getCenterList(page: page, perPage: perPage)) { result in
+    func requestCenterList(page: Int
+                           , perPage: Int
+                           , completion: @escaping (CenterModel)-> Void
+                           , failed:(()->Void)? = nil) {
+        provider.request(.getCenterList(page: page, perPage: perPage)) { (result) in
             switch result {
-            case let .success(reponse):
+            case let .success(response):
                 do {
-                    let centerList = try JSONDecoder().decode(CenterModel.self, from: reponse.data)
-                    completion(centerList)
-                } catch let error {
-                    print("여기로 들어옴\(result)")
-                    failure(error.localizedDescription)
+                    let centerList = try response.mapObject(MoyaResponse<CenterModel>.self)
+//                    if MoyaService
+//                    completion(centerList)
+                } catch {
+//                    MoyaService.
+                    failed?()
                 }
             case let .failure(error):
                 
-                failure(error.localizedDescription)
+                failed?()
             }
         }
     }
