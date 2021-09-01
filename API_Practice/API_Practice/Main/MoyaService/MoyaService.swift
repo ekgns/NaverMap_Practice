@@ -7,8 +7,9 @@
 
 import Foundation
 import Moya
+import ObjectMapper
+
 
 enum MoyaService {
     case getCenterList(page: Int, perPage: Int)
 }
-

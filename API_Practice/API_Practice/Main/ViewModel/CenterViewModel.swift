@@ -11,6 +11,7 @@ import RxSwift
 import Moya_ObjectMapper
 import RxOptional
 import Foundation
+import RxDataSource
 
 //class CenterDataManager {
 //    func RequestCenterList(page: Int, perPager: Int, delegate: ViewController) {
@@ -62,23 +63,30 @@ import Foundation
 class CenterViewModel {
     let provider = MoyaProvider<MoyaService>()
     
+    let centerViewObs = BehaviorSubject<CenterModel?>(value: nil)
+    
     func requestCenterList(page: Int
                            , perPage: Int
-                           , completion: @escaping (CenterModel)-> Void
+                           , completion: @escaping ()-> Void
                            , failed:(()->Void)? = nil) {
         provider.request(.getCenterList(page: page, perPage: perPage)) { (result) in
             switch result {
             case let .success(response):
                 do {
                     let centerList = try response.mapObject(MoyaResponse<CenterModel>.self)
-//                    if MoyaService
-//                    completion(centerList)
+                    if MoyaService.checkResponse(centerList, [.success, .unauthorized, .noContents]) ==
+                        false {
+                        failed?()
+                        return
+                    }
+                    self.centerViewObs.onNext(centerList.body)
+                    completion()
                 } catch {
-//                    MoyaService.
+                    MoyaService.showFailure(error)
                     failed?()
                 }
             case let .failure(error):
-                
+                MoyaService.showFailure(error)
                 failed?()
             }
         }
