@@ -8,6 +8,30 @@
 import Foundation
 import ObjectMapper
 
+struct CenterListItemVO {
+    var centerName: String?
+    var adress: String?
+    var lat: String?
+    var lng: String?
+    var vo:[String:Any]?
+    
+    init(centerName: String?, adress: String?, lat: String?, lng: String?) {
+        self.centerName = centerName
+        self.adress = adress
+        self.lat = lat
+        self.lng = lng
+    }
+    
+    init(vo:[String:Any]){
+        self.vo = vo
+        self.centerName = ""
+        self.adress = ""
+        self.lat = ""
+        self.lng = ""
+    }
+}
+
+
 struct CenterModel: Mappable {
     var currentCount: Int?
     var data: [Center]?
