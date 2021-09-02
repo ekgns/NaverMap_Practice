@@ -14,18 +14,19 @@ import RxSwift
 class ViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var
     
-    let disposeBag = DisposeBag()
+    
+    var viewModel = CenterViewModel()
+    var refresh = true
+    
+    var disposeBag = DisposeBag()
     
     var centers: [Center] = []
-    let viewModel = CenterViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        
-        
+        setupRx()
 //        getCenterList()
     }
     
@@ -34,6 +35,25 @@ class ViewController: UIViewController, UITableViewDelegate {
         viewModel.requestCenterList(page: 1, perPage: 284, completion: {
             self.tableView.reloadData()
         })
+        
+        
+    }
+    
+    func setupRx() {
+        viewModel.centerViewObs.subscribe(onNext: { vo in
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+    }
+    
+    private func bindTableView(){
+        // 커스텀 한 재사용 셀 설정
+        tableView.registerCustomTableViewCell(reuseIdentifier: CenterListTableViewCell.stringName)
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        viewModel.centerViewObs.bind(to: tableView.rx.items(cellIdentifier: CenterListTableViewCell.stringName)) {
+            (index:Int, element:CenterListItemVO, cell:CenterListTableViewCell) in
+            cell.setData(vo: element)
+        }
     }
     
 //    func getCenterList() {
